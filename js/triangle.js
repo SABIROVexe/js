@@ -35,9 +35,6 @@ function input(){
 
 input();
 
-
-
-
 switch(chose){
     case '1':
         square();
