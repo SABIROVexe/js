@@ -15,11 +15,28 @@ function square(){
 }
 
 function bisector(){
-    bs = ((2 * a * b) / (a + b)) * (Math.sqrt((1 - (c ** 2)) / ((a + b) ** 2)));
+    let l1 = Math.sqrt(1 - (c ** 2) / ((a + b) ** 2));
+    let l2  = ((2 * a * b) / (a + b));
+    bs = l1 * l2;
     console.log("Биссектриса треугольника: " + bs);
 }
 
-chose = prompt("Что вы хотие?(Найти площадь треугольника = 1/ Найти биссектрису = 2)");
+function input(){
+    chose = prompt("Что вы хотие?(Найти площадь треугольника = 1/ Найти биссектрису = 2)");
+    do{
+        if(chose != "1" && chose != "2"){
+            console.log("ошибка, неккоректный ввод");
+            chose = prompt("Что вы хотие?(Найти площадь треугольника = 1/ Найти биссектрису = 2)");
+        }
+
+    }while(chose != "1" && chose != "2");
+
+}
+
+input();
+
+
+
 
 switch(chose){
     case '1':
